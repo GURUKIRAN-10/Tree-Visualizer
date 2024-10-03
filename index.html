@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tree Visualizer</h1>
+        <div class="controls">
+            <input type="text" id="nodeValue" placeholder="Enter node value">
+            <button class="btn" onclick="insertNode()">Insert</button>
+            <button class="btn" onclick="deleteNode()">Delete</button>
+            <button class="btn" onclick="searchNode()">Search</button>
+            
+            <select id="traversalType" class="dropdown">
+                <option value="bfs">BFS</option>
+                <option value="dfs">DFS</option>
+                <option value="preOrder">Pre-Order</option>
+                <option value="inOrder">In-Order</option>
+                <option value="postOrder">Post-Order</option>
+            </select>
+            
+            <button class="btn" onclick="traverseTree()">Traverse</button>
+            
+            <select id="treeType" class="dropdown">
+                <option value="bst">Binary Search Tree</option>
+                <option value="avl">AVL Tree</option>
+                <option value="rb">Red-Black Tree</option>
+                <option value="binary">Binary Tree</option>
+            </select>
+        </div>
+        <div id="tree"></div>
+        <div id="resultDisplay"></div>
+    </div>
+    
+    <script src="tree.js"></script>
+</body>
+</html>
